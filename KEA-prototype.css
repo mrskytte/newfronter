@@ -83,7 +83,7 @@ a {
     color: black;
 }
 
-.inputtxt{
+.inputtxt {
     transform: translateY(46px);
     z-index: -1;
     pointer-events: none;
@@ -91,15 +91,36 @@ a {
     color: #808080;
 }
 
-.moveinput{
+.moveinput {
     animation: inputtxt 1s forwards;
-    animation-timing-function: cubic-bezier(.28,-0.45,.05,1);
+    animation-timing-function: cubic-bezier(.28, -0.45, .05, 1);
 }
 
 @keyframes inputtxt {
-    100%{
+    100% {
         transform: translateY(10px);
         font-size: 1em;
         padding-bottom: .2em;
     }
+}
+
+#menu {
+    padding-top: 60px;
+    width: 80%;
+    margin: auto;
+}
+
+.menubar {
+    margin: auto;
+    background-color: black;
+    color: #ededed;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.hide {
+    display: none;
 }
