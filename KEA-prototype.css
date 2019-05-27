@@ -176,3 +176,79 @@ header {
     color: #C3AFE1;
     margin: 0;
 }
+
+/*Open menu*/
+
+.top {
+    animation: top 1s forwards;
+}
+
+@keyframes top {
+    100% {
+        transform: translateY(15px) rotate(45deg);
+    }
+}
+
+.bottom {
+    animation: bottom 1s forwards;
+}
+
+@keyframes bottom {
+    100% {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+}
+
+.middle {
+    animation: middle 1s forwards;
+}
+
+@keyframes middle {
+    100% {
+        opacity: 0;
+    }
+}
+
+/*Reset menu*/
+
+.topback {
+    animation: topback 1s forwards;
+}
+
+@keyframes topback {
+    0% {
+        transform: translateY(15px) rotate(45deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.bottomback {
+    animation: bottomback 1s forwards;
+}
+
+@keyframes bottomback {
+    0% {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.middleback {
+    animation: middleback 1s forwards;
+}
+
+@keyframes middleback {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
