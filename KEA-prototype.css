@@ -185,7 +185,7 @@ header {
 
 @keyframes top {
     100% {
-        transform: translateY(15px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
 }
 
@@ -195,7 +195,7 @@ header {
 
 @keyframes bottom {
     100% {
-        transform: translateY(-15px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
     }
 }
 
@@ -217,7 +217,7 @@ header {
 
 @keyframes topback {
     0% {
-        transform: translateY(15px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
 
     100% {
@@ -231,7 +231,7 @@ header {
 
 @keyframes bottomback {
     0% {
-        transform: translateY(-15px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
     }
 
     100% {
