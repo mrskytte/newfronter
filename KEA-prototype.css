@@ -533,7 +533,8 @@ header {
 .folderp {
     padding: 1rem;
     border: 0px;
-    margin: 0;
+    margin: auto;
+    width: 100%;
 }
 
 #tmhead {
@@ -558,7 +559,7 @@ header {
 }
 
 #exhead {
-     margin: 0;
+    margin: 0;
     width: 100%;
     height: 60px;
     background-color: #D89A9A;
@@ -576,4 +577,40 @@ header {
     font-size: 1.3rem;
     text-align: center;
     border: .1px solid #ededed;
+}
+
+
+.arrow {
+    position: relative;
+    top: -55px;
+    left: 40%;
+    margin-top: 10px;
+    margin-right: 20px;
+    height: 30px;
+}
+
+.arrowspin{
+    animation: arrowspin .5s forwards;
+}
+
+@keyframes arrowspin {
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(90deg) translatex(5px)
+    }
+}
+
+.reversespin{
+    animation: reversespin .5s forwards;
+}
+
+@keyframes reversespin {
+    0%{
+        transform: rotate(90deg) translatex(5px)
+    }
+    100%{
+        transform: rotate(0deg)
+    }
 }
