@@ -122,7 +122,13 @@ a {
 }
 
 .hide {
-    display: none;
+    animation: hide 1s forwards;
+}
+
+@keyframes {
+    100%{
+        display: none;
+    }
 }
 
 header {
