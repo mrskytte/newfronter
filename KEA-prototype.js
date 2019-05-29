@@ -34,11 +34,14 @@ const btn4 = document.getElementById("btn4")
 const btn5 = document.getElementById("btn5")
 const btn6 = document.getElementById("btn6")
 const btn7 = document.getElementById("btn7")
+const bgBlur = document.querySelector(".bgblur")
 
+bgBlur.addEventListener("click", openMenu)
 icon.addEventListener("click", openMenu)
 
 function openMenu() {
     if (topLine.classList == "menulines top") {
+        bgBlur.classList.add("hidestart")
         topLine.classList.add("topback")
         topLine.classList.remove("top")
         midLine.classList.add("middleback")
@@ -61,6 +64,7 @@ function openMenu() {
         btn7.classList.remove("movebtn7")
         menu.classList.add("hide")
     } else {
+        bgBlur.classList.remove("hidestart")
         topLine.classList.add("top")
         topLine.classList.remove("topback")
         midLine.classList.add("middle")
