@@ -523,8 +523,8 @@ header {
     margin: 0;
 }
 
-.folderhd{
-     padding: 1rem;
+.folderhd {
+    padding: 1rem;
     font-weight: bold;
     border: 0px;
     margin: 0;
@@ -579,6 +579,12 @@ header {
     border: .1px solid #ededed;
 }
 
+#tm,
+#ex {
+    height: 60px;
+    overflow: hidden;
+}
+
 
 .arrow {
     position: relative;
@@ -589,28 +595,345 @@ header {
     height: 30px;
 }
 
-.arrowspin{
+.arrowspin {
     animation: arrowspin .5s forwards;
 }
 
 @keyframes arrowspin {
-    0%{
+    0% {
         transform: rotate(0deg)
     }
-    100%{
+
+    100% {
         transform: rotate(90deg) translatex(5px)
     }
 }
 
-.reversespin{
+.reversespin {
     animation: reversespin .5s forwards;
 }
 
 @keyframes reversespin {
-    0%{
+    0% {
         transform: rotate(90deg) translatex(5px)
     }
-    100%{
+
+    100% {
         transform: rotate(0deg)
+    }
+}
+
+
+/*Open up tmfolders*/
+
+.opentm {
+    animation: opentm 1s forwards;
+}
+
+.opentm1 {
+    animation: opentm1 1s forwards;
+}
+
+.opentm2 {
+    animation: opentm2 1s forwards;
+}
+
+.opentm3 {
+    animation: opentm3 1s forwards;
+}
+
+.opentm4 {
+    animation: opentm4 1s forwards;
+}
+
+.opentm5 {
+    animation: opentm5 1s forwards;
+}
+
+.opentm6 {
+    animation: opentm6 1s forwards;
+}
+
+.opentm7 {
+    animation: opentm7 1s forwards;
+}
+
+@keyframes opentm {
+    0% {
+        height: 60px;
+    }
+
+    100% {
+        height: 480px;
+    }
+}
+
+@keyframes opentm1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opentm2 {
+    0% {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes opentm3 {
+    0% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes opentm4 {
+    0% {
+        transform: translateY(-180px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes opentm5 {
+    0% {
+        transform: translateY(-240px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes opentm6 {
+    0% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes opentm7 {
+    0% {
+        transform: translateY(-360px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+/*Close tmfolders*/
+
+.closetm {
+    animation: closetm 1s forwards;
+}
+
+.closetm1 {
+    animation: closetm1 1s forwards;
+}
+
+.closetm2 {
+    animation: closetm2 1s forwards;
+}
+
+.closetm3 {
+    animation: closetm3 1s forwards;
+}
+
+.closetm4 {
+    animation: closetm4 1s forwards;
+}
+
+.closetm5 {
+    animation: closetm5 1s forwards;
+}
+
+.closetm6 {
+    animation: closetm6 1s forwards;
+}
+
+.closetm7 {
+    animation: closetm7 1s forwards;
+}
+
+@keyframes closetm {
+    0% {
+        height: 480px;
+    }
+
+    100% {
+        height: 60px;
+    }
+}
+
+@keyframes closetm1 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes closetm2 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+}
+
+@keyframes closetm3 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+}
+
+@keyframes closetm4 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-180px);
+        opacity: 0;
+    }
+}
+
+@keyframes closetm5 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-240px);
+        opacity: 0;
+    }
+}
+
+@keyframes closetm6 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+}
+
+@keyframes closetm7 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-360px);
+        opacity: 0;
+    }
+}
+
+/*Open ex-folder*/
+
+.openex {
+    animation: openex 1s forwards;
+}
+
+.openex1 {
+    animation: openex1 1s forwards;
+}
+
+@keyframes openex {
+    0% {
+        height: 60px;
+    }
+
+    100% {
+        height: 120px;
+    }
+}
+
+@keyframes openex1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Close ex-folder*/
+
+.closeex {
+    animation: closeex 1s forwards;
+}
+
+.closeex1 {
+    animation: closeex1 1s forwards;
+}
+
+@keyframes closeex {
+    0% {
+        height: 120px;
+    }
+
+    100% {
+        height: 60px;
+    }
+}
+
+@keyframes closeex1 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
