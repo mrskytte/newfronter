@@ -48,7 +48,7 @@ form {
 
 button[type="submit"] {
     margin: auto;
-    background-color: black;
+    background-color: #3B3B3B;
     color: #ededed;
     font-size: 1.2rem;
     width: 100%;
@@ -121,12 +121,16 @@ a {
     margin-bottom: 30px;
 }
 
+.hidestart {
+    display: none;
+}
+
 .hide {
     animation: hide 1s forwards;
 }
 
 @keyframes {
-    100%{
+    100% {
         display: none;
     }
 }
@@ -289,76 +293,83 @@ header {
     animation: movebtn7 1s forwards;
 }
 
-@keyframes movebtn1{
-    0%{
+@keyframes movebtn1 {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
-@keyframes movebtn2{
-    0%{
+@keyframes movebtn2 {
+    0% {
         transform: translateY(-90px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
-@keyframes movebtn3{
-    0%{
+@keyframes movebtn3 {
+    0% {
         transform: translateY(-180px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
-@keyframes movebtn4{
-    0%{
+@keyframes movebtn4 {
+    0% {
         transform: translateY(-270px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
-@keyframes movebtn5{
-    0%{
+@keyframes movebtn5 {
+    0% {
         transform: translateY(-360px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
-@keyframes movebtn6{
-    0%{
+@keyframes movebtn6 {
+    0% {
         transform: translateY(-450px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
-@keyframes movebtn7{
-    0%{
+@keyframes movebtn7 {
+    0% {
         transform: translateY(-540px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
@@ -395,77 +406,174 @@ header {
     animation: closebtn7 1s forwards;
 }
 
-@keyframes closebtn1{
-    0%{
+@keyframes closebtn1 {
+    0% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
 
-@keyframes closebtn2{
-    0%{
+@keyframes closebtn2 {
+    0% {
         transform: translateY(0px);
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateY(-90px);
         opacity: 0;
     }
 }
 
-@keyframes closebtn3{
-    0%{
+@keyframes closebtn3 {
+    0% {
         transform: translateY(0px);
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateY(-180px);
         opacity: 0;
     }
 }
 
-@keyframes closebtn4{
-    0%{
+@keyframes closebtn4 {
+    0% {
         transform: translateY(0px);
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateY(-270px);
         opacity: 0;
     }
 }
 
-@keyframes closebtn5{
-    0%{
+@keyframes closebtn5 {
+    0% {
         transform: translateY(0px);
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateY(-360px);
         opacity: 0;
     }
 }
 
-@keyframes closebtn6{
-    0%{
+@keyframes closebtn6 {
+    0% {
         transform: translateY(0px);
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateY(-450px);
         opacity: 0;
     }
 }
 
-@keyframes closebtn7{
-    0%{
+@keyframes closebtn7 {
+    0% {
         transform: translateY(0px);
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateY(-540px);
         opacity: 0;
     }
+}
+
+
+.docicons {
+    width: 200px;
+}
+
+#docwrapper {
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: 50%px;
+    margin-bottom: 20px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .docdiv {
+        flex: 0 0 auto;
+        margin-right: 3px;
+    }
+}
+
+#folderheader {
+    width: 100%;
+    height: 60px;
+    background-color: #3B3B3B;
+    color: #ededed;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+.folderhd{
+     padding: 1rem;
+    font-weight: bold;
+    border: 0px;
+    margin: 0;
+}
+
+.folderp {
+    padding: 1rem;
+    border: 0px;
+    margin: 0;
+}
+
+#tmhead {
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #9ACBD8;
+    color: #3B3B3B;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.tmfolder {
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #BBD4DB;
+    color: #3B3B3B;
+    font-size: 1.3rem;
+    text-align: center;
+    border: .1px solid #ededed;
+}
+
+#exhead {
+     margin: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #D89A9A;
+    color: #3B3B3B;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.exercisefolder {
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #E5B7B7;
+    color: #3B3B3B;
+    font-size: 1.3rem;
+    text-align: center;
+    border: .1px solid #ededed;
 }

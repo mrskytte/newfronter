@@ -68,6 +68,7 @@ function openMenu() {
         botLine.classList.add("bottom")
         botLine.classList.remove("bottomback")
         menu.classList.remove("hide")
+        menu.classList.remove("hidestart")
         btn1.classList.remove("closebtn1")
         btn1.classList.add("movebtn1")
         btn2.classList.remove("closebtn2")
@@ -84,3 +85,8 @@ function openMenu() {
         btn7.classList.add("movebtn7")
     }
 }
+
+
+//Main
+
+//Recent Document
