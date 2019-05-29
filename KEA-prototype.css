@@ -252,3 +252,214 @@ header {
         opacity: 1;
     }
 }
+
+/*Open up menu*/
+
+.movebtn1 {
+    animation: movebtn1 1s forwards;
+}
+
+.movebtn2 {
+    animation: movebtn2 1s forwards;
+}
+
+.movebtn3 {
+    animation: movebtn3 1s forwards;
+}
+
+.movebtn4 {
+    animation: movebtn4 1s forwards;
+}
+
+.movebtn5 {
+    animation: movebtn5 1s forwards;
+}
+
+.movebtn6 {
+    animation: movebtn6 1s forwards;
+}
+
+.movebtn7 {
+    animation: movebtn7 1s forwards;
+}
+
+@keyframes movebtn1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes movebtn2{
+    0%{
+        transform: translateY(-90px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes movebtn3{
+    0%{
+        transform: translateY(-180px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes movebtn4{
+    0%{
+        transform: translateY(-270px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes movebtn5{
+    0%{
+        transform: translateY(-360px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes movebtn6{
+    0%{
+        transform: translateY(-450px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes movebtn7{
+    0%{
+        transform: translateY(-540px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+/*Close menu*/
+
+.closebtn1 {
+    animation: closebtn1 1s forwards;
+}
+
+.closebtn2 {
+    animation: closebtn2 1s forwards;
+}
+
+.closebtn3 {
+    animation: closebtn3 1s forwards;
+}
+
+.closebtn4 {
+    animation: closebtn4 1s forwards;
+}
+
+.closebtn5 {
+    animation: closebtn5 1s forwards;
+}
+
+.closebtn6 {
+    animation: closebtn6 1s forwards;
+}
+
+.closebtn7 {
+    animation: closebtn7 1s forwards;
+}
+
+@keyframes closebtn1{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes closebtn2{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-90px);
+        opacity: 0;
+    }
+}
+
+@keyframes closebtn3{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-180px);
+        opacity: 0;
+    }
+}
+
+@keyframes closebtn4{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-270px);
+        opacity: 0;
+    }
+}
+
+@keyframes closebtn5{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-360px);
+        opacity: 0;
+    }
+}
+
+@keyframes closebtn6{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-450px);
+        opacity: 0;
+    }
+}
+
+@keyframes closebtn7{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-540px);
+        opacity: 0;
+    }
+}
