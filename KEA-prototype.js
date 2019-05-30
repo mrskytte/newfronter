@@ -151,7 +151,7 @@ schedTue = document.getElementById("scheduletue")
 schedWed = document.getElementById("schedulewed")
 schedThur = document.getElementById("schedulethur")
 schedFri = document.getElementById("schedulefri")
-//schedIconDot
+schedIconDot = document.getElementById("scheduleicon")
 openSched = document.getElementById("opensched")
 
 
@@ -197,8 +197,8 @@ function monClick() {
     }
 
      if (c == 1) {
-        mon.classList.add("hidedot")
-        schedMon.classList.add("hidestart")
+        mon.classList.add("closedot")
+        schedMon.classList.add("closesched")
         mon.classList.remove("opendot")
         schedMon.classList.remove("opensched")
          setTimeout(hideSched,1000),
@@ -417,11 +417,8 @@ function friClick() {
     }
 }
 
-function hideSched (){
-    {openSched.classList.add("hidesched")}
-}
-
 function calIconClick() {
+    console.log("Working..")
     mon.classList.add("hidedot");
     tue.classList.add("hidedot");
     wed.classList.add("hidedot");
@@ -429,10 +426,60 @@ function calIconClick() {
     fri.classList.add("hidedot");
     iconDot.classList.remove("hidedot");
 
-    //    iconDot.classList.add("opendot")
-    //    schedIconDot.classList.remove("hidestart")
-    //    schedIconDot.classList.add("opensched")
+    if (c == 1) {
+        mon.classList.add("hidedot")
+        schedMon.classList.add("hidestart")
+        mon.classList.remove("opendot")
+        schedMon.classList.remove("opensched")
+    }
+    if (c == 2) {
+        tue.classList.add("hidedot")
+        schedTue.classList.add("hidestart")
+        tue.classList.remove("opendot")
+        schedTue.classList.remove("opensched")
+    }
+    if (c == 3) {
+        wed.classList.add("hidedot")
+        schedWed.classList.add("hidestart")
+        wed.classList.remove("opendot")
+        schedWed.classList.remove("opensched")
+    }
+    if (c == 4) {
+        thur.classList.add("hidedot")
+        schedThur.classList.add("hidestart")
+        thur.classList.remove("opendot")
+        schedThur.classList.remove("opensched")
+    }
+    if (c == 5) {
+        fri.classList.add("hidedot")
+        schedFri.classList.add("hidestart")
+        fri.classList.remove("opendot")
+        schedFri.classList.remove("opensched")
+    }
+
+    if (c == 6) {
+        iconDot.classList.add("closedot")
+        schedIconDot.classList.add("closesched")
+        iconDot.classList.remove("opendot")
+        schedIconDot.classList.remove("opensched")
+        setTimeout(hideSched,1000),
+        c = 0;
+    } else {
+        openSched.classList.remove("hidesched")
+        iconDot.classList.remove("closedot")
+        schedIconDot.classList.remove("closesched")
+        iconDot.classList.add("opendot")
+        schedIconDot.classList.remove("hidestart")
+        schedIconDot.classList.add("opensched")
+        c = 6;
+    }
 }
+
+
+function hideSched (){
+    {openSched.classList.add("hidesched")}
+}
+
 //Main
 
 //Recent Document

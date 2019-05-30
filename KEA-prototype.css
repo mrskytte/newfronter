@@ -536,7 +536,7 @@ header {
 
 .folderhd {
     padding: 1rem;
-    font-weight:bolder;
+    font-weight: bolder;
     border: 0px;
     margin: 0;
 }
@@ -590,7 +590,7 @@ header {
 }
 
 .exercisefolder {
-     position: relative;
+    position: relative;
     z-index: -2;
     margin: 0;
     width: 100%;
@@ -961,7 +961,7 @@ header {
     }
 }
 
-#cal{
+#cal {
     position: absolute;
     display: flex;
     justify-content: space-around;
@@ -973,13 +973,13 @@ header {
 }
 
 
-.weekdays{
+.weekdays {
     width: 40px;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-#calicon{
+#calicon {
     height: 40px;
     margin-top: 14px;
 }
@@ -1018,11 +1018,19 @@ header {
     overflow: scroll;
 }
 
+.calendar {
+    background-color: #BEB4D1;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    overflow: scroll;
+}
+
 #opensched {
-     position: absolute;
+    position: absolute;
     top: 110px;
     z-index: 10;
-     width: 100vw;
+    width: 100vw;
     height: 60vh;
     overflow: hidden;
 }
@@ -1033,12 +1041,22 @@ header {
     margin-right: 5%;
 }
 
+#icondot {
+    background-color: #BEB4D1;
+}
+
 .schedp {
     margin-left: 5%;
     margin-top: 50px;
     width: 90%;
     border-bottom: .5px solid #3B3B3B;
     padding-bottom: 5px;
+}
+
+.schedh {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .opensched {
@@ -1049,15 +1067,17 @@ header {
     0% {
         height: 0%;
     }
-/*
+
+    /*
     30% {
         height: 0%;
     }
 */
-    100%{
+    100% {
         height: 100%;
     }
 }
+
 .opendot {
     animation: opendot 1s forwards;
 }
@@ -1081,15 +1101,17 @@ header {
     0% {
         height: 100%;
     }
-/*
+
+    /*
     30% {
         height: 0%;
     }
 */
-    100%{
+    100% {
         height: 0%;
     }
 }
+
 .closedot {
     animation: closedot 1s forwards;
 }
@@ -1099,10 +1121,12 @@ header {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
+
     66% {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
+
     100% {
 
         border-radius: 50%;
@@ -1110,6 +1134,31 @@ header {
 }
 
 .hidesched {
-   display: none;
+    display: none;
 
+}
+
+#caldays {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+#dates {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.1rem
+}
+
+.date {
+    width: 14%;
+    padding-top: 15px;
 }
