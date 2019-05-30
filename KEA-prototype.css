@@ -507,8 +507,8 @@ header {
     padding-top: 80px;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    height: 50%px;
+    overflow-x: scroll;
+    height: 50%;
     margin-bottom: 20px;
     width: 100%;
     -webkit-overflow-scrolling: touch;
@@ -540,8 +540,15 @@ header {
     margin: 0;
 }
 
-.folderp {
+.folderh {
     padding-top: 1rem;
+    border: 0px;
+    margin: auto;
+    width: 100%;
+}
+
+.folderp {
+    padding: 1rem;
     border: 0px;
     margin: auto;
     width: 100%;
@@ -951,4 +958,49 @@ header {
     100% {
         opacity: 0;
     }
+}
+
+#cal{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 60px;
+    width: 100%;
+    height: 60px;
+    color: black;
+    text-align: center;
+}
+
+
+.weekdays{
+    width: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#calicon{
+    height: 40px;
+    margin-top: 14px;
+}
+
+#home {
+    margin-top: 60px;
+}
+
+#caldots {
+    position: absolute;
+    top: 17px;
+    z-index: -1;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.caldot {
+    height: 40px;
+    width: 40px;
+}
+
+.hidedot {
+    opacity: 0;
 }

@@ -90,6 +90,39 @@ function openMenu() {
     }
 }
 
+//Calender
+
+//Weekdays
+
+mon = document.getElementById("mon")
+tue = document.getElementById("tue")
+wed = document.getElementById("wed")
+thur = document.getElementById("thur")
+fri = document.getElementById("fri")
+icondot = document.getElementById("icondot")
+
+onload = function () {
+    var d = new Date();
+    var n = d.getDay()
+    if (n == 1) {
+        mon.classList.remove("hidedot")
+    }
+    if (n == 2) {
+        tue.classList.remove("hidedot")
+    }
+    if (n == 3) {
+        wed.classList.remove("hidedot")
+    }
+    if (n == 4) {
+        thur.classList.remove("hidedot")
+    }
+    if (n == 5) {
+        fri.classList.remove("hidedot")
+    }
+    if (n == 6 || n == 0) {
+        icondot.classList.remove("hidedot")
+    }
+}
 
 //Main
 
