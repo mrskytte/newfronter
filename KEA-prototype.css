@@ -144,6 +144,7 @@ header {
 
 #headerwrap {
     position: sticky;
+    z-index: 100;
     top: 0;
     height: 60px;
     width: 100%;
@@ -984,6 +985,8 @@ header {
 }
 
 #home {
+    width: 100%;
+    height: 100%;
     margin-top: 60px;
 }
 
@@ -999,8 +1002,114 @@ header {
 .caldot {
     height: 40px;
     width: 40px;
+    background-color: #B7D1B4;
+    border-radius: 50%;
 }
 
 .hidedot {
     opacity: 0;
+}
+
+.sched {
+    background-color: #B7D1B4;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    overflow: scroll;
+}
+
+#opensched {
+     position: absolute;
+    top: 110px;
+    z-index: 10;
+     width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.time {
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.schedp {
+    margin-left: 5%;
+    margin-top: 50px;
+    width: 90%;
+    border-bottom: .5px solid #3B3B3B;
+    padding-bottom: 5px;
+}
+
+.opensched {
+    animation: opensched 1s forwards
+}
+
+@keyframes opensched {
+    0% {
+        height: 0%;
+    }
+/*
+    30% {
+        height: 0%;
+    }
+*/
+    100%{
+        height: 100%;
+    }
+}
+.opendot {
+    animation: opendot 1s forwards;
+}
+
+@keyframes opendot {
+    0% {
+        border-radius: 50%;
+    }
+
+    100% {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+}
+
+.closesched {
+    animation: closesched 1s forwards
+}
+
+@keyframes closesched {
+    0% {
+        height: 100%;
+    }
+/*
+    30% {
+        height: 0%;
+    }
+*/
+    100%{
+        height: 0%;
+    }
+}
+.closedot {
+    animation: closedot 1s forwards;
+}
+
+@keyframes closedot {
+    0% {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    66% {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    100% {
+
+        border-radius: 50%;
+    }
+}
+
+.hidesched {
+   display: none;
+
 }

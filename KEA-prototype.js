@@ -101,7 +101,8 @@ thur = document.getElementById("thur")
 fri = document.getElementById("fri")
 icondot = document.getElementById("icondot")
 
-onload = function () {
+//Highlight todays day
+onload = function todaysdate() {
     var d = new Date();
     var n = d.getDay()
     if (n == 1) {
@@ -124,6 +125,314 @@ onload = function () {
     }
 }
 
+//Open Day Schedule
+
+var c = 0;
+
+//Clickables
+m = document.getElementById("m")
+t = document.getElementById("t")
+w = document.getElementById("w")
+th = document.getElementById("th")
+f = document.getElementById("f")
+calIcon = document.getElementById("calicon")
+
+//Day highlighters
+mon = document.getElementById("mon")
+tue = document.getElementById("tue")
+wed = document.getElementById("wed")
+thur = document.getElementById("thur")
+fri = document.getElementById("fri")
+iconDot = document.getElementById("icondot")
+
+//Day Schedules
+schedMon = document.getElementById("schedulemon")
+schedTue = document.getElementById("scheduletue")
+schedWed = document.getElementById("schedulewed")
+schedThur = document.getElementById("schedulethur")
+schedFri = document.getElementById("schedulefri")
+//schedIconDot
+openSched = document.getElementById("opensched")
+
+
+
+m.addEventListener("click", monClick)
+t.addEventListener("click", tueClick)
+w.addEventListener("click", wedClick)
+th.addEventListener("click", thurClick)
+f.addEventListener("click", friClick)
+calIcon.addEventListener("click", calIconClick)
+
+function monClick() {
+    mon.classList.remove("hidedot");
+    tue.classList.add("hidedot");
+    wed.classList.add("hidedot");
+    thur.classList.add("hidedot");
+    fri.classList.add("hidedot");
+    iconDot.classList.add("hidedot");
+
+    if (c == 2) {
+        tue.classList.add("hidedot")
+        schedTue.classList.add("hidestart")
+        tue.classList.remove("opendot")
+        schedTue.classList.remove("opensched")
+    }
+    if (c == 3) {
+        wed.classList.add("hidedot")
+        schedWed.classList.add("hidestart")
+        wed.classList.remove("opendot")
+        schedWed.classList.remove("opensched")
+    }
+    if (c == 4) {
+        thur.classList.add("hidedot")
+        schedThur.classList.add("hidestart")
+        thur.classList.remove("opendot")
+        schedThur.classList.remove("opensched")
+    }
+    if (c == 5) {
+        fri.classList.add("hidedot")
+        schedFri.classList.add("hidestart")
+        fri.classList.remove("opendot")
+        schedFri.classList.remove("opensched")
+    }
+
+     if (c == 1) {
+        mon.classList.add("hidedot")
+        schedMon.classList.add("hidestart")
+        mon.classList.remove("opendot")
+        schedMon.classList.remove("opensched")
+         setTimeout(hideSched,1000),
+        c = 0;
+    } else {
+        openSched.classList.remove("hidesched")
+        mon.classList.remove("closedot")
+        schedMon.classList.remove("closesched")
+        mon.classList.add("opendot")
+        schedMon.classList.remove("hidestart")
+        schedMon.classList.add("opensched")
+        c = 1;
+    }
+}
+
+function tueClick() {
+    mon.classList.add("hidedot");
+    tue.classList.remove("hidedot");
+    wed.classList.add("hidedot");
+    thur.classList.add("hidedot");
+    fri.classList.add("hidedot");
+    iconDot.classList.add("hidedot");
+
+    if (c == 1) {
+        mon.classList.add("hidedot")
+        schedMon.classList.add("hidestart")
+        mon.classList.remove("opendot")
+        schedMon.classList.remove("opensched")
+    }
+    if (c == 3) {
+        wed.classList.add("hidedot")
+        schedWed.classList.add("hidestart")
+        wed.classList.remove("opendot")
+        schedWed.classList.remove("opensched")
+    }
+    if (c == 4) {
+        thur.classList.add("hidedot")
+        schedThur.classList.add("hidestart")
+        thur.classList.remove("opendot")
+        schedThur.classList.remove("opensched")
+    }
+    if (c == 5) {
+        fri.classList.add("hidedot")
+        schedFri.classList.add("hidestart")
+        fri.classList.remove("opendot")
+        schedFri.classList.remove("opensched")
+    }
+
+    if (c == 2) {
+        tue.classList.add("closedot")
+        schedTue.classList.add("closesched")
+        tue.classList.remove("opendot")
+        schedTue.classList.remove("opensched")
+        setTimeout(hideSched,1000),
+        c = 0;
+    } else {
+        openSched.classList.remove("hidesched")
+        tue.classList.remove("closedot")
+        schedTue.classList.remove("closesched")
+        tue.classList.add("opendot")
+        schedTue.classList.remove("hidestart")
+        schedTue.classList.add("opensched")
+        c = 2;
+    }
+}
+
+function wedClick() {
+    mon.classList.add("hidedot");
+    tue.classList.add("hidedot");
+    wed.classList.remove("hidedot");
+    thur.classList.add("hidedot");
+    fri.classList.add("hidedot");
+    iconDot.classList.add("hidedot");
+
+    if (c == 1) {
+        mon.classList.add("hidedot")
+        schedMon.classList.add("hidestart")
+        mon.classList.remove("opendot")
+        schedMon.classList.remove("opensched")
+    }
+    if (c == 2) {
+        tue.classList.add("hidedot")
+        schedTue.classList.add("hidestart")
+        tue.classList.remove("opendot")
+        schedTue.classList.remove("opensched")
+    }
+    if (c == 4) {
+        thur.classList.add("hidedot")
+        schedThur.classList.add("hidestart")
+        thur.classList.remove("opendot")
+        schedThur.classList.remove("opensched")
+    }
+    if (c == 5) {
+        fri.classList.add("hidedot")
+        schedFri.classList.add("hidestart")
+        fri.classList.remove("opendot")
+        schedFri.classList.remove("opensched")
+    }
+    if (c == 3) {
+        wed.classList.add("closedot")
+        schedWed.classList.add("closesched")
+        wed.classList.remove("opendot")
+        schedWed.classList.remove("opensched")
+        setTimeout(hideSched,1000),
+        c = 0;
+    } else {
+        openSched.classList.remove("hidesched")
+        wed.classList.remove("closedot")
+        schedWed.classList.remove("closesched")
+        wed.classList.add("opendot")
+        schedWed.classList.remove("hidestart")
+        schedWed.classList.add("opensched")
+        c = 3;
+    }
+}
+
+function thurClick() {
+    mon.classList.add("hidedot");
+    tue.classList.add("hidedot");
+    wed.classList.add("hidedot");
+    thur.classList.remove("hidedot");
+    fri.classList.add("hidedot");
+    iconDot.classList.add("hidedot");
+
+    if (c == 1) {
+        mon.classList.add("hidedot")
+        schedMon.classList.add("hidestart")
+        mon.classList.remove("opendot")
+        schedMon.classList.remove("opensched")
+    }
+    if (c == 2) {
+        tue.classList.add("hidedot")
+        schedTue.classList.add("hidestart")
+        tue.classList.remove("opendot")
+        schedTue.classList.remove("opensched")
+    }
+    if (c == 3) {
+        wed.classList.add("hidedot")
+        schedWed.classList.add("hidestart")
+        wed.classList.remove("opendot")
+        schedWed.classList.remove("opensched")
+    }
+    if (c == 5) {
+        fri.classList.add("hidedot")
+        schedFri.classList.add("hidestart")
+        fri.classList.remove("opendot")
+        schedFri.classList.remove("opensched")
+    }
+
+    if (c == 4) {
+        thur.classList.add("closedot")
+        schedThur.classList.add("closesched")
+        thur.classList.remove("opendot")
+        schedThur.classList.remove("opensched")
+        setTimeout(hideSched,1000),
+        c = 0;
+    } else {
+        openSched.classList.remove("hidesched")
+        thur.classList.remove("closedot")
+        schedThur.classList.remove("closesched")
+        thur.classList.add("opendot")
+        schedThur.classList.remove("hidestart")
+        schedThur.classList.add("opensched")
+        c = 4;
+    }
+}
+
+function friClick() {
+    mon.classList.add("hidedot");
+    tue.classList.add("hidedot");
+    wed.classList.add("hidedot");
+    thur.classList.add("hidedot");
+    fri.classList.remove("hidedot");
+    iconDot.classList.add("hidedot");
+
+    if (c == 1) {
+        mon.classList.add("hidedot")
+        schedMon.classList.add("hidestart")
+        mon.classList.remove("opendot")
+        schedMon.classList.remove("opensched")
+    }
+    if (c == 2) {
+        tue.classList.add("hidedot")
+        schedTue.classList.add("hidestart")
+        tue.classList.remove("opendot")
+        schedTue.classList.remove("opensched")
+    }
+    if (c == 3) {
+        wed.classList.add("hidedot")
+        schedWed.classList.add("hidestart")
+        wed.classList.remove("opendot")
+        schedWed.classList.remove("opensched")
+    }
+    if (c == 4) {
+        thur.classList.add("hidedot")
+        schedThur.classList.add("hidestart")
+        thur.classList.remove("opendot")
+        schedThur.classList.remove("opensched")
+    }
+
+    if (c == 5) {
+        fri.classList.add("closedot")
+        schedFri.classList.add("closesched")
+        fri.classList.remove("opendot")
+        schedFri.classList.remove("opensched")
+        setTimeout(hideSched,1000),
+        c = 0;
+    } else {
+        openSched.classList.remove("hidesched")
+        fri.classList.remove("closedot")
+        schedFri.classList.remove("closesched")
+        fri.classList.add("opendot")
+        schedFri.classList.remove("hidestart")
+        schedFri.classList.add("opensched")
+        c = 5;
+    }
+}
+
+function hideSched (){
+    {openSched.classList.add("hidesched")}
+}
+
+function calIconClick() {
+    mon.classList.add("hidedot");
+    tue.classList.add("hidedot");
+    wed.classList.add("hidedot");
+    thur.classList.add("hidedot");
+    fri.classList.add("hidedot");
+    iconDot.classList.remove("hidedot");
+
+    //    iconDot.classList.add("opendot")
+    //    schedIconDot.classList.remove("hidestart")
+    //    schedIconDot.classList.add("opensched")
+}
 //Main
 
 //Recent Document
