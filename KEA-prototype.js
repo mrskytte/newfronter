@@ -15,12 +15,13 @@ const btn4 = document.getElementById("btn4")
 const btn5 = document.getElementById("btn5")
 const btn6 = document.getElementById("btn6")
 const btn7 = document.getElementById("btn7")
-const bgBlur = document.querySelector(".bgblur")
+const bgBlur = document.getElementById("bgblur")
 
 bgBlur.addEventListener("click", openMenu)
 icon.addEventListener("click", openMenu)
 
 function openMenu() {
+    console.log("click")
     if (topLine.classList == "menulines top") {
         bgBlur.classList.add("hidestart")
         topLine.classList.add("topback")
@@ -110,6 +111,7 @@ onload = function todaysdate() {
 
 var c = 0;
 
+
 //Clickables
 m = document.getElementById("m")
 t = document.getElementById("t")
@@ -182,7 +184,7 @@ function monClick() {
         schedMon.classList.add("closesched")
         mon.classList.remove("opendot")
         schedMon.classList.remove("opensched")
-         setTimeout(hideSched,1000),
+         setTimeout(hideMon,1000),
         c = 0;
     } else {
         openSched.classList.remove("hidesched")
@@ -233,7 +235,7 @@ function tueClick() {
         schedTue.classList.add("closesched")
         tue.classList.remove("opendot")
         schedTue.classList.remove("opensched")
-        setTimeout(hideSched,1000),
+        setTimeout(hideTue,1000),
         c = 0;
     } else {
         openSched.classList.remove("hidesched")
@@ -283,7 +285,7 @@ function wedClick() {
         schedWed.classList.add("closesched")
         wed.classList.remove("opendot")
         schedWed.classList.remove("opensched")
-        setTimeout(hideSched,1000),
+        setTimeout(hideWed,1000),
         c = 0;
     } else {
         openSched.classList.remove("hidesched")
@@ -334,7 +336,7 @@ function thurClick() {
         schedThur.classList.add("closesched")
         thur.classList.remove("opendot")
         schedThur.classList.remove("opensched")
-        setTimeout(hideSched,1000),
+        setTimeout(hideThur,1000),
         c = 0;
     } else {
         openSched.classList.remove("hidesched")
@@ -385,7 +387,7 @@ function friClick() {
         schedFri.classList.add("closesched")
         fri.classList.remove("opendot")
         schedFri.classList.remove("opensched")
-        setTimeout(hideSched,1000),
+        setTimeout(hideFri,1000),
         c = 0;
     } else {
         openSched.classList.remove("hidesched")
@@ -457,10 +459,41 @@ function calIconClick() {
 }
 
 
-function hideSched (){
-    {openSched.classList.add("hidesched")}
+function hideMon (){
+    openSched.classList.add("hidesched")
+    schedMon.classList.add("hidestart")
+    schedMon.classList.remove("closesched")
 }
 
+function hideTue (){
+    openSched.classList.add("hidesched")
+    schedTue.classList.add("hidestart")
+    schedTue.classList.remove("closesched")
+}
+
+function hideWed (){
+    openSched.classList.add("hidesched")
+    schedWed.classList.add("hidestart")
+    schedWed.classList.remove("closesched")
+}
+
+function hideThur (){
+    openSched.classList.add("hidesched")
+    schedThur.classList.add("hidestart")
+    schedThur.classList.remove("closesched")
+}
+
+function hideFri (){
+    openSched.classList.add("hidesched")
+    schedFri.classList.add("hidestart")
+    schedFri.classList.remove("closesched")
+}
+
+function hideSched (){
+    openSched.classList.add("hidesched")
+    schedIconDot.classList.add("hidestart")
+    schedIconDot.classList.remove("closesched")
+}
 //Main
 
 //Recent Document

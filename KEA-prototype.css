@@ -1,12 +1,13 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
 }
-
+html,
 body {
     background-color: #ededed;
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 #logincontainer {
@@ -31,7 +32,7 @@ form {
     width: 80%;
 }
 
-#login {
+.login {
     margin: auto;
     border: none;
 }
@@ -139,7 +140,8 @@ header {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0;
+    top:0;
+    pointer-events: none;
 }
 
 #headerwrap {
@@ -169,12 +171,14 @@ header {
     opacity: .4;
     height: 100vh;
     width: 100%;
+    pointer-events: all;
 }
 
 #menubtn {
     position: absolute;
     right: 20px;
     top: 17.5px;
+    pointer-events: all;
 }
 
 .menulines {
@@ -499,28 +503,44 @@ header {
     }
 }
 
-#docwrapper {
+#recent {
+margin: 0;
     width: 100%;
-    height: 50%;
-    padding-top: 100px;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 70px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.docdive {
-    width: 20vw;
-    height: 25vw;
-    margin: 50px;
+.docwrapper {
+    display: flex;
+  min-width: 100%;
+  min-height: 200px;
+  overflow-x: auto;
+}
+.docwrapper::-webkit-scrollbar {
+  display: none;
+}
 
+.docdiv {
+  min-width: 200px;
+  margin: 15px;
 }
 
 .docicons {
-    width: 100%;
-
+   width: 150px;
+    height: 200px;
 }
 
+#h1wrap {
+    margin: 0;
+}
+
+#recenth1 {
+    margin-top: 140px;
+    font-size: 1.5rem;
+    color: #3B3B3B;
+   text-align: center;
+}
 #folderheader {
     width: 100%;
     height: 60px;
@@ -565,7 +585,7 @@ header {
 
 .tmfolder {
     position: relative;
-    z-index: -2;
+    z-index: 98;
     margin: 0;
     width: 100%;
     height: 60px;
@@ -588,7 +608,7 @@ header {
 
 .exercisefolder {
     position: relative;
-    z-index: -2;
+    z-index: 98;
     margin: 0;
     width: 100%;
     height: 60px;
@@ -990,7 +1010,7 @@ header {
 #caldots {
     position: absolute;
     top: 17px;
-    z-index: -1;
+    z-index: -2;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -1026,7 +1046,7 @@ header {
 #opensched {
     position: absolute;
     top: 110px;
-    z-index: 10;
+    z-index: 100;
     width: 100vw;
     height: 60vh;
     overflow: hidden;
